@@ -16,9 +16,8 @@
                     @foreach($users as $user)
                     {{$user->name}}
                     {{$user->email}}
-                    {{$user->role}}
+                    {{$user->roles->first()->name}}
                     @endforeach
-                    You are logged in!
                 </div>
             </div>
         </div>
