@@ -13,11 +13,22 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <table class="table table-hover">
+                    <thead>
+                        <th>Name</th>
+                        <th>E-mail</th>
+                        <th>Role</th>
+                    </thead>
+                    <tbody>
                     @foreach($users as $user)
-                    {{$user->name}}
-                    {{$user->email}}
-                    {{$user->roles->first()->name}}
+                        <tr>
+                            <td>{{$user->name}} </td>
+                            <td>{{$user->email}} </td>
+                            <td>{{$user->roles->first()->name}} </td>
+                        </tr>
                     @endforeach
+                </tbody>
+            </table>
                 </div>
             </div>
         </div>
